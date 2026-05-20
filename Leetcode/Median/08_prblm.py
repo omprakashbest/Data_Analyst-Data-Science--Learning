@@ -20,7 +20,7 @@ Note:
 
 class Solution:
     def minScore(self, n: int, roads: list[list[int]]) -> int:
-        adj = defaultdict(list) # node -> list of (neighbor, distance)
+        adj = defaultdict(list) # type: ignore # node -> list of (neighbor, distance)
         for src, dst, dist in roads:
             adj[src].append((dst, dist))
             adj[dst].append((src, dist))
